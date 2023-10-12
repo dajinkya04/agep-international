@@ -39,13 +39,15 @@ body::-webkit-scrollbar-thumb {
 a{
   text-decoration:none;
 }
+// Top Nav Logo 
 .logo img{
- margin-left:1%;
-height:4%;
-bottom:5%;
-width:5%
+  margin-left:1%;
+  height:4%;
+  bottom:5%;
+  width:5%
 }
 
+// Top Nav Social icon
   .social-icons {
     display: inline;
     justify-content: center;
@@ -56,6 +58,7 @@ width:5%
 
   .social-icons li {
     margin: 0 10px;
+    list-style:none;
   }
 .social-icons a {
     display: inline-block;
@@ -74,7 +77,6 @@ width:5%
     transform: scale(1.2);
   }
 .bg-img{
-// background-image: url("../img/img4.webp");
 background:#0b0b0b;
 min-height: 100vh;
   /* Center and scale the image nicely */
@@ -86,6 +88,22 @@ min-height: 100vh;
     overflow:hidden;
 
 }
+
+@media screen and (max-width: 675px){
+.bg-img{
+ background:#0b0b0b;
+  min-height: 30vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+  overflow:hidden;
+
+}
+}
+
 #menuToggle
 {
   display: block;
@@ -183,15 +201,17 @@ color:#f47721;
   padding: 34px;
   padding-top: 30px;
   right: -70px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.8) 100%);
-  // background-color:hsl(0,0%,100% ,.20);
-  opacity:0.5;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+  // background-color:hsl(0,10%,90% ,0.1);
+  // background-color:transparent;
+  // opacity:0.5;
   list-style-type: none;
   // -webkit-font-smoothing: antialiased;  
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   transition: transform 0.3s cubic-bezier(0.77,0.2,0.05,1.0);
   overflow:hidden;
+  border-radius:10%;
   
 }
 
@@ -200,7 +220,7 @@ color:#f47721;
   padding: 5px 0px 17px 0px;
   font-size: 12px;
   color:#fff;
-    overflow:hidden;
+  overflow:hidden;
 
 }
 #menu li:hover
@@ -216,15 +236,53 @@ color:#f47721;
   transform: none;
   opacity: 1;
 }
+@media screen and (max-width: 1082px) {
+  .logo img{
+      margin-left:5%;
+      height:5%;
+      bottom:5%;
+      width:5% }
+   #menuToggle i span{
+    font-size:80%;
+}
+.animation-section h5{
+  font-size:40px;
+}
+
+}
 
 @media screen and (max-width: 768px) {
   #menu {
+     width: 150px;
+  margin: 0px 0 0 0;
+  padding: 34px;
+  padding-top: 30px;
+  right: -70px;
     transform: none;
     opacity: 0;
     transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-      overflow:hidden;
-
+    overflow:hidden;
   }
+    .logo img{
+      margin-left:5%;
+      height:5%;
+      bottom:5%;
+      width:7%
+}
+}
+@media screen and (max-width: 434px) {
+   #menu {
+      transform: none;
+      opacity: 0;
+      transition: opacity 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+      overflow:hidden;
+  }
+    .logo img{
+      margin-left:5%;
+      height:10%;
+      bottom:5%;
+      width:10%
+}
 }
 /*----------------------- Top Header Section End------------------------- */
 
@@ -241,7 +299,7 @@ color:#f47721;
   display:flex;
   padding:5px;
   // margin-left:70px;
-  bottom:65%;
+  bottom:120%;
   height:45vh;
   animation: fade-in 5s ease-in-out infinite;
 }
@@ -269,8 +327,11 @@ color:#f47721;
   }
 }
 .animation-section h5{
-  color:#bebcbc;
+    color:#bebcbc;
+    top:-75px;
+    position:relative;
 }
+
 .animation-section .animation-card .ani-img1 img {
   animation-delay: 0s;
 }
@@ -290,11 +351,501 @@ color:#f47721;
 }
 
 .animation-section .animation-card .ani-img3 img {
-  top:-0.6%;
+  top:-28%;
 }
 .animation-section .animation-card .ani-img5 img {
-  top:32%;
+  top:4%;
 }
+
+// _____________________________________________________________________________
+@media screen and (max-width: 1082px) {
+  .animation-section .animation-card{
+  position:absolute;
+  width:30%
+}
+.animation-section h5{
+  font-size:40px;
+}
+.animation-section .animation-card img{
+  position:relative;
+  display:flex;
+  padding:5px;
+  // margin-left:70px;
+  bottom:80%;
+  height:45vh;
+  animation: fade-in 5s ease-in-out infinite;
+}
+.animation-section .animation-card .ani-img3 img {
+ width:42%;
+ top:-8%
+}
+.animation-section .animation-card .ani-img5 img {
+ width:42%;
+ top:25%;
+}
+}
+
+@media screen and (max-width: 994px) {
+ .animation-section .animation-card{
+  position:absolute;
+  width:30%
+}
+.animation-section h5{
+  font-size:40px;
+  position:relative;
+  top:-10%;
+}
+.animation-section .animation-card img{
+  position:relative;
+  display:flex;
+  padding:5px;
+  // margin-left:70px;
+  bottom:115%;
+  height:45vh;
+  animation: fade-in 5s ease-in-out infinite;
+}
+.animation-section .animation-card .ani-img3 img {
+ width:42%;
+ top:-25%;
+}
+.animation-section .animation-card .ani-img5 img {
+ width:42%;
+ top:7%;
+}
+}
+
+@media screen and (max-width: 878px) {
+ .bg-img{
+    background:#0b0b0b;
+    min-height: 70vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+    overflow:hidden;
+
+}
+
+  #menuToggle i span{
+    font-size:10px;
+  }
+  #menuToggle i {
+    font-size:10px;
+  }
+  .animation-section h5{
+  font-size:35px;
+  top:-30px;
+  position:relative;
+
+}
+  .animation-section .animation-card{
+  position:absolute;
+  width:25%
+}
+
+.animation-section .animation-card img{
+  position:relative;
+  display:flex;
+  padding:5px;
+  // margin-left:70px;
+  bottom:135%;
+  height:35vh;
+  animation: fade-in 5s ease-in-out infinite;
+}
+.animation-section .animation-card .ani-img3 img {
+ width:40%;
+ top:-36%
+}
+.animation-section .animation-card .ani-img5 img {
+ width:40%;
+ top:-4%;
+}
+}
+
+@media screen and (max-width: 778px) {
+ .bg-img{
+    background:#0b0b0b;
+    min-height: 50vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+    overflow:hidden;
+}
+
+  #menuToggle i span{
+    font-size:8px;
+  }
+  #menuToggle i {
+    font-size:8px;
+  }
+  .animation-section h5{
+  font-size:35px;
+  top:-40px;
+  position:relative;
+
+}
+  .animation-section .animation-card{
+  position:absolute;
+  width:30%
+}
+
+.animation-section .animation-card img{
+  position:relative;
+  display:flex;
+  padding:5px;
+  // margin-left:70px;
+  bottom:147%;
+  height:30vh;
+  animation: fade-in 5s ease-in-out infinite;
+}
+.animation-section .animation-card .ani-img3 img {
+ width:40%;
+ top:-42%
+}
+.animation-section .animation-card .ani-img5 img {
+ width:40%;
+ top:-10%;
+}
+}
+
+@media screen and (max-width: 758px) {
+ .bg-img{
+    background:#0b0b0b;
+    min-height: 50vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+    overflow:hidden;
+}
+#menu{
+  top:35%;
+  right:-90%;
+  background:none;
+}
+ #menu li
+{
+  font-size:7px;
+  right:50px;
+  top:-20%;
+  padding:1px;
+
+}
+  #menuToggle i span{
+    font-size:8px;
+  }
+  #menuToggle i {
+    font-size:8px;
+  }
+  .animation-section h5{
+  font-size:35px;
+  top:-75px;
+  position:relative;
+
+}
+  .animation-section .animation-card{
+  position:absolute;
+  width:30%
+}
+
+.animation-section .animation-card img{
+  position:relative;
+  display:flex;
+  padding:5px;
+  bottom:155%;
+  height:30vh;
+  animation: fade-in 5s ease-in-out infinite;
+}
+.animation-section .animation-card .ani-img3 img {
+ width:40%;
+ top:-45%
+}
+.animation-section .animation-card .ani-img5 img {
+ width:40%;
+ top:-13%;
+}
+.handbg h2{
+  display:none;
+}
+}
+
+
+// --------------------------------------------------------------------------------
+@media screen and (max-width: 700px){
+.social-icons li {
+  padding:0px;
+  margin:3px;
+  list-style:none;
+  }
+  .social-icons a{
+    width:30px;
+  }
+  .bg-img{
+    background:#0b0b0b;
+    min-height: 50vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+    overflow:hidden;
+}
+
+
+#menu{
+  top:35%;
+  right:-90%;
+background:none;
+}
+ #menu li
+{
+  font-size:7px;
+  right:50px;
+  top:-20%;
+  padding:1px;
+
+}
+  #menuToggle i span{
+    font-size:8px;
+  }
+  #menuToggle i {
+    font-size:8px;
+  }
+  .animation-section h5{
+  font-size:35px;
+  top:-75px;
+  position:relative;
+
+}
+  .animation-section .animation-card{
+  position:absolute;
+  width:30%
+}
+
+.animation-section .animation-card img{
+  position:relative;
+  display:flex;
+  padding:5px;
+  bottom:107%;
+  height:30vh;
+  animation: fade-in 5s ease-in-out infinite;
+}
+.animation-section .animation-card .ani-img3 img {
+ width:40%;
+ top:-22%
+}
+.animation-section .animation-card .ani-img5 img {
+ width:40%;
+ top:10%;
+}
+.handbg h2{
+  display:none;
+}
+
+}
+
+// Small Devices
+@media screen and (max-width: 662px){
+  .bg-img{
+    background:#0b0b0b;
+    min-height: 50vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+    overflow:hidden;
+}
+#menu{
+  top:35%;
+  right:-90%;
+background:none;
+}
+ #menu li
+{
+  font-size:7px;
+  right:50px;
+  top:-20%;
+  padding:1px;
+
+}
+  #menuToggle i span{
+    font-size:8px;
+  }
+  #menuToggle i {
+    font-size:8px;
+  }
+  .animation-section h5{
+  font-size:35px;
+  top:-75px;
+  position:relative;
+
+}
+  .animation-section .animation-card{
+  position:absolute;
+  width:30%
+}
+
+.animation-section .animation-card img{
+  position:relative;
+  display:flex;
+  padding:5px;
+  bottom:160%;
+  height:35vh;
+  animation: fade-in 5s ease-in-out infinite;
+}
+.animation-section .animation-card .ani-img3 img {
+ width:40%;
+ top:-22%
+}
+.animation-section .animation-card .ani-img5 img {
+ width:40%;
+ top:10%;
+}
+.handbg h2{
+  display:none;
+}
+}
+
+@media screen and (max-width: 656px){
+.social-icons li {
+  padding:0px;
+  margin:2px;
+  list-style:none;
+  }
+  .social-icons a{
+    width:30px;
+  }
+  .bg-img{
+    background:#0b0b0b;
+    min-height: 50vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Needed to position the navbar */
+  position: relative;
+    overflow:hidden;
+}
+
+
+#menu{
+  top:35%;
+  right:-90%;
+background:none;
+}
+ #menu li
+{
+  font-size:7px;
+  right:50px;
+  top:-20%;
+  padding:1px;
+
+}
+  #menuToggle i span{
+    font-size:8px;
+  }
+  #menuToggle i {
+    font-size:8px;
+  }
+  .animation-section h5{
+  font-size:30px;
+  top:-60px;
+  position:relative;
+
+}
+  .animation-section .animation-card{
+  position:absolute;
+  width:30%
+}
+
+.animation-section .animation-card img{
+  position:relative;
+  display:flex;
+  padding:5px;
+  bottom:175%;
+  height:25vh;
+  animation: fade-in 5s ease-in-out infinite;
+}
+.animation-section .animation-card .ani-img3 img {
+ width:38%;
+ top:-57%
+}
+.animation-section .animation-card .ani-img5 img {
+ width:38%;
+ top:-26%;
+}
+.handbg h2{
+  display:none;
+}
+
+}
+
+
+@media screen and (max-width: 564px) {
+  #menuToggle i span{
+    font-size:12px;
+  }
+  #menuToggle i {
+    font-size:12px;
+  }
+  .animation-section .animation-card img{
+    display:none;
+  }
+  .animation-section h5{
+    position:relative;
+    top:-30%;
+    font-size:32px;
+  }
+}
+@media screen and (max-width: 420px) {
+  #menuToggle i span{
+    font-size:12px;
+  }
+  #menuToggle i {
+    font-size:12px;
+  }
+  .animation-section .animation-card img{
+    display:none;
+  }
+  .animation-section h5{
+    position:relative;
+    top:-30%;
+    font-size:25px;
+  }
+}
+@media screen and (max-width: 294px) {
+  #menuToggle i span{
+    font-size:12px;
+  }
+  #menuToggle i {
+    font-size:12px;
+  }
+  .animation-section .animation-card img{
+    display:none;
+  }
+  .animation-section h5{
+    position:relative;
+    top:-30%;
+    font-size:20px;
+  }
+}
+
+
+
+
+
+
+
 
 /* -------------------------------------
 vertical Card Section End
@@ -956,4 +1507,17 @@ about-carousel
 
 /*--------------------------------------------
  Innovation Section--------------------------*/
- 
+ /* Custom CSS for the left-side modal */
+    .modal.left .modal-dialog {
+      position: fixed;
+      left: 0;
+      margin: 0;
+      height: 100%;
+      width: 320px; /* Adjust this width to fit your content */
+      transform: translateX(-100%);
+    }
+
+    .modal.left .modal-content {
+      height: 100%;
+      overflow-y: auto;
+    }
